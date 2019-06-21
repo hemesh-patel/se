@@ -1,0 +1,13 @@
+Perform inner join on sales and booking data on column destination name. We assume one to one mappings.
+This will tell show us which of the bookings are related to current sales.
+
+In the output I would aggregate some of the integers to show number (adults, children, infants, rooms, rate etc)
+
+Show how bookings where made. Simple statement like:
+ Case when platformName = 'MOBILE_WEB' THEN 1 as mob_web_count,
+ CASE WHEN platformName = 'WEB' THEN 1 as web_count
+etc.
+
+I would this aggregate this up to a weekly level (probably use a partition by)
+
+
